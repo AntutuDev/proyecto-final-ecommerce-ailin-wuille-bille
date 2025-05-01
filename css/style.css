@@ -1,0 +1,156 @@
+/* Hoja de estilos para Void Antutu*/
+*{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+body{
+    background-image: url(../imagenes/sitebg.png);
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    cursor: url(../imagenes/cursor.png), auto;
+}
+
+#panelcentrado{
+    margin: auto;
+    text-align: center;
+    background-color: #312857CC;
+    background-blend-mode: lighten;
+    width:1200px;
+    border-radius: 50px 50px 50px 50px;
+}
+
+#panelppal{
+    margin-left: 100px;
+    margin-right: 100px;   
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+img{
+    border-radius: 20px 20px 20px 20px;
+}
+
+.cuadrada{
+    border-radius: 0;
+}
+
+h1,h2,h3,h4{
+    letter-spacing: 10px;
+}
+
+h1{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 35px;
+}
+
+h4{
+    font-size: 30px;
+}
+
+a:link{
+    text-decoration: none; /*quita el subrayado de los links*/
+}
+
+a:hover{
+    cursor: url(../imagenes/cursor2.png), auto; /*cambia cursor sobre los links*/
+}
+
+button{
+    background-color: black;
+    border: none;
+    text-decoration: none;
+    height: 60px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button:hover{
+    background-color: #8c72fffb;
+}
+
+input,option,select{
+    background-color: black; /*formulario*/
+}
+  
+li {
+    list-style-type: square; /*la viñeta de la lista*/
+}
+
+hr{
+    width:75%;
+    border: 1px dashed; /*separador*/
+}
+
+nav{
+    display: inline-block; /*botones superiores*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sino{
+    display: inline-block; /*lista 2 columnas*/
+    text-align: left;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.categoria{
+    padding-top: 20px; /*seccion de las comisiones*/
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.info{
+    margin:auto; /*los 2 divs de cada seccion de las comisiones*/
+    max-width: 500px;
+}
+
+.grilla{
+    padding-top: 20px; /*lista de la tienda*/
+    padding-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.itempic{
+    max-width: 400px; /*imagenes de la tienda*/
+}
+
+.itemdesc{
+    align-items: center; /*texto de la tienda*/
+    display: inline;
+    max-width: 400px;
+}
+
+.normaltext{
+    text-align: left; /*alineacion general*/
+}
+
+#socialmedia img{ /*iconos del footer*/
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#iconmedia:hover{ /*aplica filtro de color a los iconos al posicionarse*/
+    filter: invert(45%) sepia(41%) saturate(1440%) hue-rotate(217deg) brightness(102%) contrast(102%);
+}
+
+

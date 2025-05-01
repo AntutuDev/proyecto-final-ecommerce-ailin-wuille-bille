@@ -1,2 +1,2 @@
-# proyecto-final-ecommerce-ailin-wuille-bille
-Proyecto final FrontEnd HTML CSS JS
+Sitio web artistico de VOID ANTUTU
+Este proyecto es un sitio web que agrupa todos los servicios de arte e ilustracion disponibles, asi como tambien una tienda online de assets y recursos para streamers y consumidores/creadores de contenido digital.
