@@ -65,7 +65,7 @@ a:link{
 }
 
 a:hover{
-    cursor: url(../imagenes/cursor2.png), auto; /*cambia cursor sobre los links*/
+    cursor: url(../imagenes/hand.png), auto; /*cambia cursor sobre los links*/
 }
 
 button{
