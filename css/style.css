@@ -79,6 +79,7 @@ button{
 
 button:hover{
     background-color: #8c72fffb;
+    cursor: url(../imagenes/hand.png), auto;
 }
 
 input,option,select{
