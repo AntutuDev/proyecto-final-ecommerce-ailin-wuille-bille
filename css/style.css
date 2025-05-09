@@ -21,6 +21,7 @@ body{
     background-blend-mode: lighten;
     width:1200px;
     border-radius: 50px 50px 50px 50px;
+    backdrop-filter: blur(6px);
 }
 
 #panelppal{
