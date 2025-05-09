@@ -14,17 +14,17 @@ body{
     cursor: url(../imagenes/cursor.png), auto;
 }
 
-#panelcentrado{
-    margin: auto;
+#panelcentrado{ /*panel violeta redondeado*/
+    margin: auto; /*centrado del panel*/
     text-align: center;
     background-color: #312857CC;
-    background-blend-mode: lighten;
-    width:1200px;
-    border-radius: 50px 50px 50px 50px;
-    backdrop-filter: blur(6px);
+    background-blend-mode: lighten; /*transparencia*/
+    width:1200px; /*fija ancho*/
+    border-radius: 50px 50px 50px 50px; /*redondea bordes*/
+    backdrop-filter: blur(6px); /*efecto blur en el fondo del panel violeta*/
 }
 
-#panelppal{
+#panelppal{ /*setea los margenes del panel de todo el contenido del sitio*/
     margin-left: 100px;
     margin-right: 100px;   
     margin-top: 50px;
@@ -83,7 +83,7 @@ button:hover{
 }
 
 input,option,select{
-    background-color: black; /*formulario*/
+    background-color: black; /*fondo de los campos del formulario*/
 }
   
 li {
@@ -96,13 +96,13 @@ hr{
 }
 
 nav{
-    display: inline-block; /*botones superiores*/
+    display: inline-block; /*botones de navegacion*/
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .sino{
-    display: inline-block; /*lista 2 columnas*/
+    display: inline-block; /*lista 2 columnas del alcance*/
     text-align: left;
     margin-left: 60px;
     margin-right: 60px;
