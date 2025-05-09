@@ -120,21 +120,17 @@ nav{
     max-width: 500px;
 }
 
-.grilla{
-    padding-top: 20px; /*lista de la tienda*/
+.grilla{ /*matriz esqueleto de la tienda*/
+    display:flex;
+    padding-top: 20px;
     padding-bottom: 20px;
-    display: inline-flex;
-    align-items: center;
+    justify-content: center; /*filas centradas*/
+    flex-wrap: wrap; /*si no entran en la fila, van para abajo*/
+    row-gap: 40px; /*espacio entre filas del flex*/
 }
 
-.itempic{
-    max-width: 400px; /*imagenes de la tienda*/
-}
-
-.itemdesc{
-    align-items: center; /*texto de la tienda*/
-    display: inline;
-    max-width: 400px;
+.item{ /*items de la grilla de la tienda*/
+    max-width: 300px;
 }
 
 .normaltext{
