@@ -19,7 +19,7 @@ body{
     text-align: center;
     background-color: #312857CC;
     background-blend-mode: lighten; /*transparencia*/
-    width:60vw; /*fija ancho*/
+    width:65vw; /*fija ancho*/
     border-radius: 50px 50px 50px 50px; /*redondea bordes*/
     backdrop-filter: blur(6px); /*efecto blur en el fondo del panel violeta*/
 }
@@ -91,7 +91,7 @@ li {
 }
 
 hr{
-    width:75%;
+    width:70%;
     border: 1px dashed; /*separador*/
 }
 
@@ -121,17 +121,22 @@ nav{
 }
 
 .grilla{ /*matriz esqueleto de la tienda*/
-    display:flex;
+    display:grid; /*matriz*/
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); /*fr es fraccion*/
+    place-items: center; /*el centrado del grid*/
+    row-gap: 40px; /*espacio entre filas del grid*/
     padding-top: 20px;
     padding-bottom: 20px;
-    justify-content: center; /*filas centradas*/
-    flex-wrap: wrap; /*si no entran en la fila, van para abajo*/
-    row-gap: 40px; /*espacio entre filas del flex*/
+    
+    /*display:flex*/
+    /*justify-content: center; /*filas centradas*/
+    /*flex-wrap: wrap; /*si no entran en la fila, van para abajo*/
+    /*row-gap: 40px; /*espacio entre filas del flex*/
 }
 
-.item{ /*items de la grilla de la tienda*/
+/*.item{ /*items de la grilla de la tienda
     max-width: 300px;
-}
+}*/
 
 .normaltext{
     text-align: left; /*alineacion general*/
