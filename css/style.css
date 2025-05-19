@@ -19,7 +19,7 @@ body{
     text-align: center;
     background-color: #312857CC;
     background-blend-mode: lighten; /*transparencia*/
-    width:1200px; /*fija ancho*/
+    width:60vw; /*fija ancho*/
     border-radius: 50px 50px 50px 50px; /*redondea bordes*/
     backdrop-filter: blur(6px); /*efecto blur en el fondo del panel violeta*/
 }
