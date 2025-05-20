@@ -122,7 +122,7 @@ nav{
 
 .grilla{ /*matriz esqueleto de la tienda*/
     display:grid; /*matriz*/
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); /*fr es fraccion*/
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); /*la cantidad de columnas se ajusta al tamaño del viewport*/
     place-items: center; /*el centrado del grid*/
     row-gap: 40px; /*espacio entre filas del grid*/
     padding-top: 20px;
