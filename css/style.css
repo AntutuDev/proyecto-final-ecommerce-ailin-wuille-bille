@@ -7,9 +7,7 @@
 }
 
 body{
-    background-image: url(../imagenes/sitebg.png);
-    background-color: rgba(255, 255, 255, 0.4);
-    background-blend-mode: lighten;
+    background-image: url(../imagenes/bg.png);
     background-attachment: fixed;
     cursor: url(../imagenes/cursor.png), auto;
 }
@@ -17,7 +15,7 @@ body{
 #panelcentrado{ /*panel violeta redondeado*/
     margin: auto; /*centrado del panel*/
     text-align: center;
-    background-color: #312857CC;
+    background-color: #413572cc;
     background-blend-mode: lighten; /*transparencia*/
     width:65vw; /*fija ancho*/
     border-radius: 50px 50px 50px 50px; /*redondea bordes*/
