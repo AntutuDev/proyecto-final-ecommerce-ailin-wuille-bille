@@ -128,7 +128,7 @@ nav{
 
 .grilla{ /*matriz esqueleto de la tienda*/
     display:grid; /*matriz*/
-    grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); /*la cantidad de columnas se ajusta al tamaño del viewport*/
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); /*la cantidad de columnas se ajusta al tamaño del viewport*/
     place-items: center; /*el centrado del grid*/
     row-gap: 2.2vw; /*espacio entre filas del grid ~40px*/
     column-gap: 1.7vw; /*espacio entre las columnas del grid ~30px*/
@@ -165,11 +165,20 @@ nav{
     .botonflotante img{ /*resize de la imagen del div*/
         width: 50%;
     }
+
+    .grilla{
+        grid-template-columns: 1fr 1fr; /*fijar 2 columnas*/
+    }
 }
 
 @media(max-width: 600px){/*smartphones*/
     .botonflotante img{ /*resize de la imagen del div*/
         width:30%;
     }
+
+    .grilla{
+        grid-template-columns: 1fr; /*fijar una sola columna*/
+    }
+
 }
 
