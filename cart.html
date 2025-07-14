@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <title>Void Antutu</title>
+    <link rel="icon" type="image/x-icon" href="./imagenes/icon.ico">
+</head>
+    <div id="panelcentrado">
+        <a href="cart.html"><div class="carrito"><img class="squareimg" src="./imagenes/cart.svg"><span id="cuenta-carrito">0</span></div></a>
+        <div id="panelppal">
+            <body>
+                <header>
+                    <img src="./imagenes/logo.png" alt="Grimy" width="15%">
+                    <h1>VOID ANTUTU</h1>  
+                </header>
+                <hr>
+                <nav>
+                    <a href="index.html"><button>HOME</button></a>
+                    <a href="tds.html"><button>TDS</button></a>
+                    <a href="comisiones.html"><button>COMIS</button></a>
+                    <a href="formulario.html"><button>FORMULARIO</button></a>
+                    <a href="reviews.html"><button>REVIEWS</button></a> 
+                    <a href="tienda.html"><button>TIENDA</button></a> 
+                </nav> 
+                <hr>
+
+                <main>
+                    <h3>CARRITO</h3>
+                    <div id="vacio" class="categoria">
+                        <div class="info">
+                            <img src="./imagenes/emptycart.png"></img>
+                        </div>
+                        <div class="info">
+                            <p>No hay productos en el carrito. Visita la <a href="tienda.html">
+                            <b style= "color:#a18dfcfb;">tienda</b></a> y agrega algunos ◕‿◕ ✿.</p>
+                        </div>
+                    </div>                   
+                    <div id="grillacart"></div>
+                    <div id="totales">
+                        <p><b>Total items: </b><span id="cantidad">0</span></p>
+                        <p><b>Total a pagar: </b>$<span id="precio">0</span></p>
+                        <a href="checkout.html"><button>PROCEDER A CHECKOUT</button></a>
+                        <button id="resetCart">VACIAR CARRITO</button>
+                    </div>     
+                </main>
+                
+                <footer>
+                    <hr><br>
+                    <section id="socialmedia">
+                        <a href="https://www.instagram.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/insta.svg" title="Instagram" alt="Instagram" width="4%"></a>
+                        <a href="https://www.x.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/twitter.svg" title="X" alt="X" width="4%"></a>
+                        <a href="contacto.html">
+                            <img id="iconmedia" src="./imagenes/mail.svg" title="Contacto" alt="Contacto" width="4%"></a>
+                        <a href="https://www.ko-fi.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/kofi.svg" title="Donaciones" alt="Kofi" width="4%"></a>   
+                    </section>
+                    <p>© Void Antutu. Todos los derechos reservados.</p>
+                </footer>
+                <script src="javascript/digitales.js"></script>
+                <script src="javascript/script.js"></script>
+                <script src="javascript/cartSystem.js"></script>
+            </body>
+        </div>
+    </div>
+</html>
