@@ -8,10 +8,12 @@
     <title>Void Antutu</title>
     <link rel="icon" type="image/x-icon" href="./imagenes/icon.ico">
 </head>
+<div class="botonup" id="irarriba"><img src="./imagenes/handup.png"></div>
     <div id="panelcentrado">
+        <a href="cart.html"><div class="carrito"><img class="squareimg" src="./imagenes/cart.svg"><span id="cuenta-carrito">0</span></div></a>
         <div id="panelppal">
             <body>
-                <header id="upform">
+                <header>
                     <img src="./imagenes/logo.png" alt="Grimy" width="15%">
                     <h1>VOID ANTUTU</h1>   
                 </header>
@@ -26,10 +28,11 @@
                 </nav>  
                 
                 <hr>
-                <h2>SOLICITUD DE COMISION</h2>
+                <h3>SOLICITUD DE COMISION</h3>
                 <hr>
 
                 <main>
+                    <br>
                     <form name="formulario" method="post" action="https://formspree.io/f/mjkyzqln">
                         <label for= "fnombre">Nombre*:</label><br>  
                         <input type="text" id="fnombre" name="fnombre" required><br>
@@ -59,14 +62,14 @@
                         </select><br>
                         <label for= "ftipocolor">Tipo de coloreado*:</label><br>  
                         <select id="ftipocolor" name="ftipocolor" required><br>
-                            <option>Blanco y negro / Escala de grises</option>
-                            <option>Colores planos / Sombreado simple</option>
-                            <option>Full color y render</option>
+                            <option>B&N / Escala de grises</option>
+                            <option>Colores planos / Render simple</option>
+                            <option>Full color / Full render</option>
                         </select><br>
                         <label for= "fnombrepj">Nombre de tu personaje:</label><br>  
                         <input type="text" id="fnombrepj" name="fnombrepj"><br>
                         <label for= "fgenero">Género (opcional):</label><br>  
-                        <input type="text" id="fgenero" name="fgenero" required><br>
+                        <input type="text" id="fgenero" name="fgenero"><br>
                         <label for= "fespecie">Especie*:</label><br>  
                         <input type="text" id="fespecie" name="fespecie" required><br>
                         <label for= "fcuerpo">Tipo de cuerpo*:</label><br>  
@@ -85,15 +88,15 @@
                         <input type="textarea" id="fdescripcion" name="fdescripcion" required><br>
                         <label for= "faccesorios">Vestimenta/accesorios/pose*:</label><br>  
                         <input type="textarea" id="faccesorios" name="faccesorios" required><br>
-                        <label for= "fref">Imágenes de referencia. Usa un servicio de hosting como imgur y pega el link aquí:</label><br>  
+                        <label for= "fref">Imágenes de referencia. Usa un servicio de hosting como imgur y pega el link de acceso aquí:</label><br>  
                         <input type="textarea" id="fref" name="fref"><br>
                         <label for= "fotros">Otros detalles no especificados previamente (opcional):</label><br>  
                         <input type="textarea" id="fotros" name="fotros"><br>
                         <br>
                         <button type="submit" name="botenviar">ENVIAR</button>
                         <button type="reset" name="botborrar">BORRAR</button>
-
                     </form>
+                    <br>
                     
                 </main>
                 
@@ -101,17 +104,19 @@
                     <hr><br>
                     <section id="socialmedia">
                         <a href="https://www.instagram.com/voidantutu">
-                            <img id="iconmedia" src="./imagenes/insta.svg" alt="Instagram" width="4%"></a>
+                            <img id="iconmedia" src="./imagenes/insta.svg" title="Instagram" alt="Instagram" width="4%"></a>
                         <a href="https://www.x.com/voidantutu">
-                            <img id="iconmedia" src="./imagenes/twitter.svg" alt="X" width="4%"></a>
-                        <a href="mailto:voidantutu@gmail.com">
-                            <img id="iconmedia" src="./imagenes/mail.svg" alt="Email" width="4%"></a>
+                            <img id="iconmedia" src="./imagenes/twitter.svg" title="X" alt="X" width="4%"></a>
+                        <a href="contacto.html">
+                            <img id="iconmedia" src="./imagenes/mail.svg" title="Contacto" alt="Contacto" width="4%"></a>
                         <a href="https://www.ko-fi.com/voidantutu">
-                            <img id="iconmedia" src="./imagenes/kofi.svg" alt="Kofi" width="4%"></a>   
+                            <img id="iconmedia" src="./imagenes/kofi.svg" title="Donaciones" alt="Kofi" width="4%"></a>   
                     </section>
                     <p>© Void Antutu. Todos los derechos reservados.</p>
-                    <div class="botonflotante"><a href="#upform"><img src="./imagenes/handup.png"></a></div>
                 </footer>
+                <script src="javascript/digitales.js"></script>
+                <script src="javascript/script.js"></script>
+                <script src="javascript/cartSystem.js"></script>
             </body>
         </div>
     </div>
