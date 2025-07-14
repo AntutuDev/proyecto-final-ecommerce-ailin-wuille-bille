@@ -9,8 +9,6 @@ function cargarComisiones(comisiones){ // carga de items del array de comisiones
         nuevaInfo1.classList = "info";
         nuevaInfo1.innerHTML = `<img src = "${comi.img}">`;            
         
-        const ruta = `<img src = "${comi.img}">`;
-
         const nuevaInfo2 = document.createElement("div");
         nuevaInfo2.classList = "info";
         nuevaInfo2.innerHTML = `
