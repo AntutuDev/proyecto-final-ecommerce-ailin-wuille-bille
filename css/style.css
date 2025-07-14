@@ -11,7 +11,9 @@ html{
 
 body{
     background-image: url(../imagenes/bg.png);
-    background-attachment: fixed;
+    /*background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;*/
+    background-attachment:fixed;
     cursor: url(../imagenes/cursor.png), auto;
 }
 
@@ -20,8 +22,8 @@ body{
     text-align: center;
     background-color: #413572cc;
     background-blend-mode: lighten; /*transparencia*/
-    width:65vw; /*fija ancho*/
-    border-radius: 2.5vw 2.5vw 2.5vw 2.5vw; /*redondea bordes*/
+    width:65vw; /*fija ancho acorde al ancho de la ventana*/
+    border-radius: 2.5vw 2.5vw 2.5vw 2.5vw; /*redondea bordes ~50px*/
     backdrop-filter: blur(6px); /*efecto blur en el fondo del panel violeta*/
 }
 
@@ -84,10 +86,18 @@ button:hover{
     cursor: url(../imagenes/hand.png), auto;
 }
 
-input,option,select{
+.squareimg{ /*clase para que las imagenes no tengan bordes redondeados*/
+    border-radius: 0;
+}
+
+input,option,select,textarea{
     background-color: black; /*fondo de los campos del formulario*/
     font-size: 1rem; /*hereda del padre html*/
     width: 20vw; /*ancho de los campos*/
+}
+
+option,select:hover{
+    cursor: url(../imagenes/hand.png), auto;
 }
   
 li {
@@ -113,43 +123,178 @@ nav{
     margin-right: 3.2vw;
 }
 
-.categoria{ /*seccion de las comisiones*/
+.categoria{/*imagen y texto de las comisiones, reviews y formularios de orden vacia, contacto y carrito vacio*/
     display:grid;
     grid-template-columns: 1fr 1fr;
     justify-content:center;
     padding-top: 1.05vw; /*~20px*/ 
     padding-bottom: 1.05vw; /*~20px*/
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 2vw 0;
 }
 
 .info{
-    margin:auto; /*texto/imagen de cada seccion de las comisiones*/
-    max-width: 500px;
+    margin:auto; /*texto/imagen de cada seccion de las comisiones y formularios*/
+    max-width: 50vw;
 }
 
-.grilla{ /*matriz esqueleto de la tienda*/
+.info img{ /*tamaño de las imagenes de los clase .info*/
+    width: 15vw;
+}
+
+.categoria img:hover{
+    cursor: url(../imagenes/hand.png), auto;
+}
+
+.popupFondo{ /*la pantalla blurreada del fondo cuando aparece el popup*/
+    display: none; /*oculto por defecto hasta que se clickea el objeto*/
+    position: fixed;
+    z-index: 10; /*prioridad eje z*/
+    padding-top: 2vw;
+    background-color: rgba(0,0,0,0.5); /*fondo negro transparente al 50%*/
+    backdrop-filter: blur(6px); /*efecto blur en el fondo*/
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*activa el scrolling si fuera necesario*/
+    left: 0;
+    top: 0;
+}
+
+.popupPic{ /*el popup con la imagen*/
+    text-align: center;
+    margin: auto; /*centrado*/
+    padding: 2vw;
+    width: 50vw;
+    animation-name: fadeIn; /*transicion*/
+    animation-duration: 0.5s;
+}
+
+.popupPic img{ /*imagen del popup de las reviews*/   
+    width: 40vw;
+}
+
+.popupDetalles{ /*el popup con los detalles de la comision*/
+    background-color: #35277cbe;
+    border:dashed;
+    color:#8c72fffb;
+    width: fit-content; /*se ajusta al contenido*/
+    border-radius: 0.5vw;
+    margin: auto; /* centrado*/
+    margin-top: 5vw;
+    animation-name: fadeIn; /*transicion*/
+    animation-duration: 0.5s;
+}
+
+.popupDetalles img{ /*la imagen limita la altura del popup*/
+    height: 30vw;
+}
+
+#container{ /*div para la imagen y descripcion de cada popup de comision*/
+    display:flex;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3vw;
+    place-items: center;
+    margin: auto;
+    padding-left: 2vw;
+}
+
+.cerrar{ /*boton de cierre del popup*/
+    background-color: #8c72fffb;
+    border-radius: 0.2vw;
+    width: 2vw;
+    text-align: center;
+    float: right;
+}
+
+.cerrar:hover,
+.cerrar:focus{
+    background-color: rgb(225, 28, 92);
+    cursor: url(../imagenes/hand.png), auto;
+}
+
+
+#grilla{ /*matriz esqueleto de la tienda*/
     display:grid; /*matriz*/
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); /*la cantidad de columnas se ajusta al tamaño del viewport*/
+    grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); /*la cantidad de columnas se ajusta al tamaño del viewport*/
     place-items: center; /*el centrado del grid*/
     row-gap: 2.2vw; /*espacio entre filas del grid ~40px*/
     column-gap: 1.7vw; /*espacio entre las columnas del grid ~30px*/
     padding-top: 1.05vw; /*~20px*/
     padding-bottom: 1.05vw; /*~20px*/
+    
+    /*display:flex*/
+    /*justify-content: center; /*filas centradas*/
+    /*flex-wrap: wrap; /*si no entran en la fila, van para abajo*/
+    /*row-gap: 40px; /*espacio entre filas del flex*/
 }
 
+/*.item{ /*items de la grilla de la tienda. Esta clase usarla para flex, para grid no hace falta
+    max-width: 300px;
+}*/
+
 .izqtext{
-    text-align: left; /*alineacion general*/
+    text-align: left; /*alineacion para el TOS*/
 }
 
 .storetext{
     font-size: 1.1vw; /*descripcion de los items en venta ~20px*/
 }
 
-.botonflotante{ /*la manito que va al top de la pagina*/
+.botonup{ /*la manito que va al top de la pagina*/
     position: fixed;
-    bottom: 2vw;
-    right: 2vw;
-    z-index: 10; /*prioridad en el eje z*/
+    bottom: 3vw;
+    right: 3vw;
+    z-index: 5; /*prioridad en el eje z*/
+    cursor: url(../imagenes/hand.png), auto;
+    display: none; /* inicialmente oculto, aparece al desplazarse mas de 300 px en vertical */
 }
+
+.carrito{ /*div del carrito con el contador y la imagen*/
+    position: fixed;
+    width: 2.5vw;
+    cursor: url(../imagenes/hand.png), auto;
+    right: 3vw;
+    top: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+#cuenta-carrito{ /*contador rojo de items del carrito*/
+    background-color:rgb(225, 28, 92);
+    border-radius: 0.2vw;
+    width: 1.5vw;
+    text-align: center;
+    position: absolute;
+    bottom: 1.2vw;
+    left: 2vw;
+}
+
+.item-carrito{ /* cada renglon de la lista de items del carrito*/
+    display:flex;
+    justify-content:space-around;
+    padding: 0.5vw;    
+}
+
+#totales,#vacio{ /*los divs que se ocultan/muestran cuando no hay items en el carrito*/ 
+    text-align: center;
+}
+
+#resumenCompra{ /*div que contiene la orden de compra del checkout*/
+    padding-bottom: 2vw;
+}
+
+.oculto{ /*clase que oculta divs*/
+    display: none;
+}
+
+#cmensaje{ /*textarea del formulario de contacto*/
+    height: 15vw;
+    resize: none;
+}
+
+
+/*footer*/
 
 #socialmedia img{ /*iconos del footer*/
     display: inline-block;
@@ -161,24 +306,26 @@ nav{
     filter: invert(45%) sepia(41%) saturate(1440%) hue-rotate(217deg) brightness(102%) contrast(102%);
 }
 
-@media(max-width: 1200px){ /*pantallas medianas*/
-    .botonflotante img{ /*resize de la imagen del div*/
-        width: 50%;
-    }
 
-    .grilla{
-        grid-template-columns: 1fr 1fr; /*fijar 2 columnas*/
+/*media queries*/
+
+@media(max-width: 1200px){ /*pantallas medianas*/
+    .botonup img{ /*resize de la imagen de la manito arriba*/
+        width: 50%;
     }
 }
 
 @media(max-width: 600px){/*smartphones*/
-    .botonflotante img{ /*resize de la imagen del div*/
+    .botonup img{ /*resize de la imagen de la manito arriba*/
         width:30%;
     }
-
-    .grilla{
-        grid-template-columns: 1fr; /*fijar una sola columna*/
-    }
-
 }
+
+@keyframes fadeIn { /*transicion para contenido de popup*/
+  from {top:0; opacity:0}
+  to {top:0; opacity:1}
+}
+
+
+
 
