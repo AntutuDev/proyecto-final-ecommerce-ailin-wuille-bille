@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <title>Void Antutu</title>
+    <link rel="icon" type="image/x-icon" href="./imagenes/icon.ico">
+</head>
+    <div id="panelcentrado">
+        <a href="cart.html"><div class="carrito"><img class="squareimg" src="./imagenes/cart.svg"><span id="cuenta-carrito">0</span></div></a>
+        <div id="panelppal">
+            <body>
+                <header>
+                    <img src="./imagenes/logo.png" alt="Grimy" width="15%">
+                    <h1>VOID ANTUTU</h1>  
+                </header>
+                <hr>
+                <nav>
+                    <a href="index.html"><button>HOME</button></a>
+                    <a href="tds.html"><button>TDS</button></a>
+                    <a href="comisiones.html"><button>COMIS</button></a>
+                    <a href="formulario.html"><button>FORMULARIO</button></a>
+                    <a href="reviews.html"><button>REVIEWS</button></a> 
+                    <a href="tienda.html"><button>TIENDA</button></a> 
+                </nav> 
+                <hr>
+
+                <main>
+                    <h3>ORDEN DE COMPRA</h3>
+                    <div id="ordenVacia" class="categoria">
+                        <div class="info">
+                            <img src="./imagenes/emptycart.png"></img>
+                        </div>
+                        <div class="info">
+                            <p>No hay productos en la orden de compra. Visita la <a href="tienda.html">
+                            <b style= "color:#a18dfcfb;">tienda</b></a> para añadir algunos ◕‿◕ ✿.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="resumenCompra">
+                        <div id="ordendecompra"></div>
+                            <form name="carrito" method="post" action="https://formspree.io/f/mdkzvjgp">
+                                <textarea id="listaItems" name="carrito" style=display:none;></textarea>
+                                <textarea id="montos" name="monto" style=display:none;></textarea>
+                                <br>
+                                <hr>
+                                <br>
+                                <label>Nombre completo: </label><br>
+                                <input type="text" id="name" name="name" required><br>
+                                <label>Email: </label><br>
+                                <input type="email" id="emailcontacto" name="email" required><br>
+                                <label>Teléfono: </label><br>
+                                <input type="tel" id="telefono" name="telefono">
+                                <br><br>
+                                <button type = "submit" id="botoncompra">CONFIRMAR COMPRA</button>
+                            </form>
+                            <br>
+                            <a href= "cart.html"><button>MODIFICAR</button></a>
+                            
+                    </div>     
+                </main>
+                
+                <footer>
+                    <hr><br>
+                    <section id="socialmedia">
+                        <a href="https://www.instagram.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/insta.svg" title="Instagram" alt="Instagram" width="4%"></a>
+                        <a href="https://www.x.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/twitter.svg" title="X" alt="X" width="4%"></a>
+                        <a href="contacto.html">
+                            <img id="iconmedia" src="./imagenes/mail.svg" title="Contacto" alt="Contacto" width="4%"></a>
+                        <a href="https://www.ko-fi.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/kofi.svg" title="Donaciones" alt="Kofi" width="4%"></a>   
+                    </section>
+                    <p>© Void Antutu. Todos los derechos reservados.</p>
+                </footer>
+                <script src="javascript/digitales.js"></script>
+                <script src="javascript/script.js"></script>
+                <script src="javascript/cartSystem.js"></script>
+                <script src="javascript/checkout.js"></script>
+            </body>
+        </div>
+    </div>
+</html>
