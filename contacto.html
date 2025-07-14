@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <title>Void Antutu</title>
+    <link rel="icon" type="image/x-icon" href="./imagenes/icon.ico">
+</head>
+<div class="botonup" id="irarriba"><img src="./imagenes/handup.png"></div>
+    <div id="panelcentrado">
+        <a href="cart.html"><div class="carrito"><img class="squareimg" src="./imagenes/cart.svg"><span id="cuenta-carrito">0</span></div></a>
+        <div id="panelppal">
+            <body>
+                <header>
+                    <img src="./imagenes/logo.png" alt="Grimy" width="15%">
+                    <h1>VOID ANTUTU</h1>   
+                </header>
+                <hr>
+                <nav>
+                    <a href="index.html"><button>HOME</button></a>
+                    <a href="tds.html"><button>TDS</button></a>
+                    <a href="comisiones.html"><button>COMIS</button></a>
+                    <a href="formulario.html"><button>FORMULARIO</button></a>
+                    <a href="reviews.html"><button>REVIEWS</button></a>
+                    <a href="tienda.html"><button>TIENDA</button></a> 
+                </nav>  
+                
+                <hr>
+                <h3>CONTACTO</h3>
+                <hr>
+
+                <main>
+                    <p>Puedes enviarme un mensaje con tu consulta aquí ◕‿◕ ✿</p>
+                    <div class= "categoria">
+                        <div class="info">
+                            <img src="./imagenes/grimymsg.png"></img>
+                        </div>
+                        <div class="info">
+                           <form name="contacto" method="post" action="https://formspree.io/f/mdkzroev">
+                            <label for= "cnombre">Nombre*:</label><br>  
+                            <input type="text" id="cnombre" name="cnombre" required><br>
+                            <label for= "cmail">Email*:</label><br>
+                            <input type="text" id="cemail" name="cemail" required><br>
+                            <label for= "cmotivo">Motivo de la consulta*:</label><br>  
+                            <select id="cmotivo" name="cmotivo" required><br>
+                                <option>Agregar info para una comisión</option>
+                                <option>Problemas con comisión</option>
+                                <option>Problemas con orden de compra</option>
+                                <option>Otros</option>
+                            </select><br>  
+                            <label for= "cmensaje">Mensaje*:</label><br>  
+                            <textarea id="cmensaje" name="cmensaje" required></textarea><br>
+                            <br>
+                            <button type="submit" name="botsend">ENVIAR</button>
+                            <button type="reset" name="botdelete">BORRAR</button>
+                            </form> 
+                        </div>
+                    </div>
+                    
+                    
+                </main>
+                
+                <footer>
+                    <hr><br>
+                    <section id="socialmedia">
+                        <a href="https://www.instagram.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/insta.svg" title="Instagram" alt="Instagram" width="4%"></a>
+                        <a href="https://www.x.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/twitter.svg" title="X" alt="X" width="4%"></a>
+                        <a href="contacto.html">
+                            <img id="iconmedia" src="./imagenes/mail.svg" title="Contacto" alt="Contacto" width="4%"></a>
+                        <a href="https://www.ko-fi.com/voidantutu">
+                            <img id="iconmedia" src="./imagenes/kofi.svg" title="Donaciones" alt="Kofi" width="4%"></a>   
+                    </section>
+                    <p>© Void Antutu. Todos los derechos reservados.</p>
+                </footer>
+                <script src="javascript/digitales.js"></script>
+                <script src="javascript/script.js"></script>
+                <script src="javascript/cartSystem.js"></script>
+            </body>
+        </div>
+    </div>
+</html>
