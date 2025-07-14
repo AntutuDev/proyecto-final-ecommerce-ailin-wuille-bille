@@ -8,10 +8,21 @@
     <title>Void Antutu</title>
     <link rel="icon" type="image/x-icon" href="./imagenes/icon.ico">
 </head>
+<div class="botonup" id="irarriba"><img src="./imagenes/handup.png"></div>
+<div id="popupFondo" class="popupFondo">
+    <div class="popupDetalles">
+        <span class="cerrar">&times;</span>
+        <div id="container">
+            <p id="pic"></p>
+            <p id="data"></p>
+        </div>      
+    </div>
+</div>
     <div id="panelcentrado">
+        <a href="cart.html"><div class="carrito"><img class="squareimg" src="./imagenes/cart.svg"><span id="cuenta-carrito">0</span></div></a>
         <div id="panelppal">
             <body>
-                <header id="upcom">
+                <header>
                     <img src="./imagenes/logo.png" alt="Grimy" width="15%">
                     <h1>VOID ANTUTU</h1>  
                 </header>
@@ -27,118 +38,28 @@
                 
                 <hr>
                 <main>
-                    <div class="categoria">
-                        <div class="info">
-                            <img src="./imagenes/chibi.png" alt="Chibi" width="80%">
-                        </div>
-                        <div class="info">
-                            <h3>CHIBI</h3>
-                            <p>
-                                A partir de ARS 10000 dependiendo estilo y cantidad de personajes extra.
-                            </p>
-                            <button onclick='alert("Sección en construcción ◕‿◕")'>Detalles</button>
-                        </div>
-                    </div>
-                <hr>
-                    <div class="categoria">
-                        <div class="info">
-                            <h3>BUSTO</h3>
-                            <p>
-                                A partir de ARS 15000 dependiendo estilo y cantidad de personajes extra.
-                            </p>
-                            <button onclick='alert("Sección en construcción ◕‿◕")'>Detalles</button>
-                        </div>
-                        <div class="info">
-                            <img src="./imagenes/bust.png" alt="Busto" width="70%">
-                        </div>
-                        
-                    </div>
-                <hr>
-                    <div class="categoria">
-                        <div class="info">
-                            <img src="./imagenes/halfbody.png" alt="Medio cuerpo" width="60%">
-                        </div>
-                        <div class="info">
-                            <h3>MEDIO CUERPO</h3>
-                            <p>
-                                A partir de ARS 20000 dependiendo estilo y cantidad de personajes extra.
-                            </p>
-                            <button onclick='alert("Sección en construcción ◕‿◕")'>Detalles</button>
-                        </div>
-                    </div>
-                <hr>
-                    <div class="categoria">
-                        <div class="info">
-                            <h3>CUERPO ENTERO</h3>
-                            <p>
-                                A partir de ARS 25000 dependiendo estilo y cantidad de personajes extra.
-                            </p>
-                            <button onclick='alert("Sección en construcción ◕‿◕")'>Detalles</button>
-                        </div>
-                        <div class="info">
-                            <img src="./imagenes/fullbody.png" alt="Cuerpo entero" width="70%">
-                        </div>
-                    </div>
-                <hr>
-                    <div class="categoria">
-                        <div class="info">
-                            <img src="./imagenes/18.png" alt="+18" width="70%">
-                        </div>
-                        <div class="info">
-                            <h3>+18</h3>
-                            <p>
-                                A partir de ARS 30000 dependiendo estilo y cantidad de personajes extra.
-                            </p>
-                            <button onclick='alert("Sección en construcción ◕‿◕")'>Detalles</button>
-                        </div>
-                        
-                    </div>
-                <hr>
-                    <div class="categoria">
-                        <div class="info">
-                            <h3>HOJA DE REFERENCIA</h3>
-                            <p>
-                                A partir de ARS 40000 dependiendo estilo, cantidad de vistas y detalles de la hoja de referencia.
-                            </p>
-                            <button onclick='alert("Sección en construcción ◕‿◕")'>Detalles</button>
-                        </div>
-                        <div class="info">
-                            <img src="./imagenes/refsheet.png" alt="Hoja de referencia" width="80%">
-                        </div>   
-                    </div>
-                <hr>
-                    <div class="categoria">
-                        <div class="info">
-                            <img src="./imagenes/resources.png" alt="Recursos" width="70%">
-                        </div>
-                        <div class="info">
-                            <h3>RECURSOS PERSONALIZADOS</h3>
-                            <p>
-                                Desde ARS 5000. El precio varía dependiendo si se trata de emotes, banners, stickers, fondos de pantalla, paneles, etc.
-                            </p>
-                            <button onclick='alert("Sección en construcción ◕‿◕")'>Detalles</button>
-                        </div>
-                    </div>
-                    
+                    <div id="grillacomis"></div>
                 </main>
-                
-                
+                                
                 <footer>
                     <hr><br>
                     <section id="socialmedia">
                         <a href="https://www.instagram.com/voidantutu">
-                            <img id="iconmedia" src="./imagenes/insta.svg" alt="Instagram" width="4%"></a>
+                            <img id="iconmedia" src="./imagenes/insta.svg" title="Instagram" alt="Instagram" width="4%"></a>
                         <a href="https://www.x.com/voidantutu">
-                            <img id="iconmedia" src="./imagenes/twitter.svg" alt="X" width="4%"></a>
-                        <a href="mailto:voidantutu@gmail.com">
-                            <img id="iconmedia" src="./imagenes/mail.svg" alt="Email" width="4%"></a>
+                            <img id="iconmedia" src="./imagenes/twitter.svg" title="X" alt="X" width="4%"></a>
+                        <a href="contacto.html">
+                            <img id="iconmedia" src="./imagenes/mail.svg" title="Contacto" alt="Contacto" width="4%"></a>
                         <a href="https://www.ko-fi.com/voidantutu">
-                            <img id="iconmedia" src="./imagenes/kofi.svg" alt="Kofi" width="4%"></a>   
+                            <img id="iconmedia" src="./imagenes/kofi.svg" title="Donaciones" alt="Kofi" width="4%"></a>   
                     </section>
                     <p>© Void Antutu. Todos los derechos reservados.</p>
-                    <div class="botonflotante"><a href="#upcom"><img src="./imagenes/handup.png"></a></div>
                 </footer>
+                <script src="javascript/digitales.js"></script>
+                <script src="javascript/script.js"></script>
+                <script src="javascript/cartSystem.js"></script>
+                <script src="javascript/comis.js"></script>
             </body>
         </div>
-    </div>
+    </div>    
 </html>
