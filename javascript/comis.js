@@ -8,6 +8,10 @@ function cargarComisiones(comisiones){ // carga de items del array de comisiones
         const nuevaInfo1 = document.createElement("div");
         nuevaInfo1.classList = "info";
         nuevaInfo1.innerHTML = `<img src = "${comi.img}">`;            
+        nuevaInfo1.addEventListener('click', function(){
+            const path = `<img src = "${comi.img}">`;
+            mostrarGrande(path);
+        });
         
         const nuevaInfo2 = document.createElement("div");
         nuevaInfo2.classList = "info";
@@ -53,6 +57,24 @@ function mostrarMasInfo(com){
     window.addEventListener('click', function(e){
         if(e.target == fondo){ // cierra si clickea en cualquier parte del popup blurreado
             fondo.style.display = "none";
+        }
+    })
+}
+
+function mostrarGrande(path){
+    const bg = document.getElementById("popupBg"); // el fondo blurreado
+    const cross = document.getElementsByClassName("salir")[0]; // la cruz de cierre del popup
+    bg.style.display = "block";
+    const imagenComi = document.getElementById("imagenComi"); // obtiene la ubicacion del <p>
+    
+    imagenComi.innerHTML = path;
+    cross.addEventListener('click', function(){
+        bg.style.display = "none"; // cierra si clickea en la cruz
+    })
+    
+    window.addEventListener('click', function(e){
+        if(e.target == bg){ // cierra si clickea en cualquier parte del popup blurreado
+            bg.style.display = "none";
         }
     })
 }
