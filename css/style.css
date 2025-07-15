@@ -147,6 +147,8 @@ nav{
     cursor: url(../imagenes/hand.png), auto;
 }
 
+/* POPUPS*/
+
 .popupFondo{ /*la pantalla blurreada del fondo cuando aparece el popup*/
     display: none; /*oculto por defecto hasta que se clickea el objeto*/
     position: fixed;
@@ -161,7 +163,7 @@ nav{
     top: 0;
 }
 
-.popupPic{ /*el popup con la imagen*/
+.popupPic{ /*el popup con la imagen agrandada de los reviews (usa popupFondo)*/
     text-align: center;
     margin: auto; /*centrado*/
     padding: 2vw;
@@ -170,11 +172,11 @@ nav{
     animation-duration: 0.5s;
 }
 
-.popupPic img{ /*imagen del popup de las reviews*/   
+.popupPic img{ /*imagen agrandada del popup de las reviews (usa popupFondo)*/   
     width: 40vw;
 }
 
-.popupDetalles{ /*el popup con los detalles de la comision*/
+.popupDetalles{ /*el popup con los detalles de la comision (boton cierre, un container con info y pic, usa popupFondo)*/
     background-color: #35277cbe;
     border:dashed;
     color:#8c72fffb;
@@ -190,7 +192,7 @@ nav{
     height: 30vw;
 }
 
-#container{ /*div para la imagen y descripcion de cada popup de comision*/
+#container{ /*div para la imagen y descripcion de cada popup de comision (usa popupFondo)*/
     display:flex;
     grid-template-columns: 1fr 1fr;
     column-gap: 3vw;
@@ -199,7 +201,7 @@ nav{
     padding-left: 2vw;
 }
 
-.cerrar{ /*boton de cierre del popup*/
+.cerrar{ /*boton de cierre del popup (usa popupFondo)*/
     background-color: #8c72fffb;
     border-radius: 0.2vw;
     width: 2vw;
@@ -212,6 +214,48 @@ nav{
     background-color: rgb(225, 28, 92);
     cursor: url(../imagenes/hand.png), auto;
 }
+
+.popupBg{ /*para el popup de imagen agrandada de las comisiones*/
+    display: none; /*oculto por defecto hasta que se clickea el objeto*/
+    position: fixed;
+    z-index: 10; /*prioridad eje z*/
+    padding-top: 2vw;
+    background-color: rgba(0,0,0,0.5); /*fondo negro transparente al 50%*/
+    backdrop-filter: blur(6px); /*efecto blur en el fondo*/
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*activa el scrolling si fuera necesario*/
+    left: 0;
+    top: 0;
+}
+
+.popupImagenComi{ /*el popup con la imagen agrandada de las comis (usa popupBg)*/
+    text-align: center;
+    margin: auto; /*centrado*/
+    padding: 2vw;
+    width: 50vw;
+    animation-name: fadeIn; /*transicion*/
+    animation-duration: 0.5s;
+}
+
+.popupImagenComi img{ /*imagen del popup de las comis*/   
+    height: 40vw;
+}
+
+.salir{ /*boton de cierre del popup de imagen agrandada de las comis (usa popupBg)*/
+    background-color: #8c72fffb;
+    border-radius: 0.2vw;
+    width: 2vw;
+    text-align: center;
+    float: right;
+}
+
+.salir:hover,
+.salir:focus{
+    background-color: rgb(225, 28, 92);
+    cursor: url(../imagenes/hand.png), auto;
+}
+
 
 
 #grilla{ /*matriz esqueleto de la tienda*/
